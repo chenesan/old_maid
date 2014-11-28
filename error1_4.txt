@@ -1,0 +1,1728 @@
+judge num: 1, player_num: 4
+3 1 2 4 
+e is 1
+organizer:message to judge 1 2 3 4
+
+organizer:endloop
+organizer:remain:
+organizer:before select_judge,total game 1
+listen3,tell6
+judgeinput1 2 3 4
+judge open ,fd is 3
+judge open judge1_A.FIFO blocking
+judge open judge1_A.FIFO,fd is 6
+call player,judgeid1,indexA,random72
+A player to tell fifo judge1.FIFO,fd 3
+A player to listen fifo judge1_A.FIFO,fd 6
+A player to get cards
+A cards num 14
+A: not receive card
+player A pid is 7808
+judge open judge1_B.FIFO blocking
+judge open judge1_B.FIFO,fd is 7
+A: not receive card
+call player,judgeid1,indexB,random13419
+B player to tell fifo judge1.FIFO,fd 7
+B player to listen fifo judge1_B.FIFO,fd 8
+B player to get cards
+B cards num 13
+B: not receive card
+player B pid is 7809
+judge open judge1_C.FIFO blocking
+judge open judge1_C.FIFO,fd is 8
+A: not receive card
+B: not receive card
+call player,judgeid1,indexC,random63401
+C player to tell fifo judge1.FIFO,fd 8
+C player to listen fifo judge1_C.FIFO,fd 9
+C player to get cards
+C cards num 13
+C: not receive card
+player C pid is 7810
+judge open judge1_D.FIFO blocking
+judge open judge1_D.FIFO,fd is 9
+A: not receive card
+B: not receive card
+C: not receive card
+call player,judgeid1,indexD,random15341
+D player to tell fifo judge1.FIFO,fd 9
+D player to listen fifo judge1_D.FIFO,fd 10
+D player to get cards
+D cards num 13
+D: not receive card
+player D pid is 7811
+A: not receive card
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge: write cards to A
+judge: write cards to B
+judge: write cards to C
+judge: write cards to D
+judge:not received
+B: before check eliminate,original cards
+:9,8,11,12,12,1,5,8,13,7,7,7,12,
+B: after eliminate,cards
+:9,11,1,5,13,7,12,
+B: wait for message...
+C: before check eliminate,original cards
+:2,2,10,9,8,11,0,4,6,3,11,6,3,
+C: after eliminate,cards
+:10,9,8,0,4,
+C: wait for message...
+D: before check eliminate,original cards
+:10,4,10,5,4,3,6,1,3,5,13,11,1,
+D: after eliminate,cards
+:6,13,11,
+D: wait for message...
+A: before check eliminate,original cards
+:1,2,5,13,7,8,10,4,2,13,6,9,9,12,
+A: after eliminate,cards
+:1,5,7,8,10,4,6,12,
+A: wait for message...
+judge:get message B 13419 7
+judge:get message C 63401 5
+judge:get message D 15341 3
+judge:get message A 72 8
+8,7,5,3,
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 7
+judge:after write cards_num to player A
+A: get message < 7
+judge:before read drawed_id from player A
+A: hold these cards:
+1,5,7,8,10,4,6,12,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 2
+judge:get player_index A,random_key 72, drawed_id 2
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 2
+judge:after write drawed_id to player B,drawed_id is 2
+judge:before read card_number from player B
+B: get message > 2
+B: hold these cards:
+9,11,1,5,13,7,12,
+B: after write card_number 11 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 11
+9,1,5,13,7,12,
+judge:before write card_number to player A,card_number is 11
+B: wait for message...
+after judge write card_number_str to A,card_number_str is 11
+judge:before read eliminate_or_not from player A
+before check eliminate,player A have cards:
+1,5,7,8,10,4,6,12,
+A: before write eliminate_or_not 0 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+1,5,7,8,10,4,6,12,11,
+judge:get player_index A,random_key 72, eliminate_or_not 0
+A: wait for message...
+judge:player A has 9 cards
+judge:player B has 6 cards
+judge:player C has 5 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 5
+judge:after write cards_num to player B
+B: get message < 5
+judge:before read drawed_id from player B
+B: hold these cards:
+9,1,5,13,7,12,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 5
+judge:get player_index B,random_key 13419, drawed_id 5
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 5
+judge:after write drawed_id to player C,drawed_id is 5
+C: get message > 5
+judge:before read card_number from player C
+C: hold these cards:
+10,9,8,0,4,
+C: after write card_number 4 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 4
+10,9,8,0,
+judge:before write card_number to player B,card_number is 4
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 4
+before check eliminate,player B have cards:
+9,1,5,13,7,12,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+9,1,5,13,7,12,4,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 9 cards
+judge:player B has 7 cards
+judge:player C has 4 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+10,9,8,0,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 1
+judge:after write drawed_id to player D,drawed_id is 1
+judge:before read card_number from player D
+D: get message > 1
+D: hold these cards:
+6,13,11,
+D: after write card_number 6 to judge
+D: after rearrange,hold cards:
+13,11,
+D: wait for message...
+judge:after read card_number from player D
+judge:get player_index D,random_key 15341, card_number 6
+judge:before write card_number to player C,card_number is 6
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 6
+before check eliminate,player C have cards:
+10,9,8,0,
+C: before write eliminate_or_not 0 to judge
+judge:after read eliminate_or_not from player C
+C: after rearrange:
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+10,9,8,0,6,
+judge:player A has 9 cards
+C: wait for message...
+judge:player B has 7 cards
+judge:player C has 5 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 9
+judge:after write cards_num to player D
+judge:before read drawed_id from player D
+D: get message < 9
+D: hold these cards:
+13,11,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 4
+judge:get player_index D,random_key 15341, drawed_id 4
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 4
+judge:after write drawed_id to player A,drawed_id is 4
+A: get message > 4
+judge:before read card_number from player A
+A: hold these cards:
+1,5,7,8,10,4,6,12,11,
+A: after write card_number 8 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 8
+1,5,7,10,4,6,12,11,
+judge:before write card_number to player D,card_number is 8
+A: wait for message...
+after judge write card_number_str to D,card_number_str is 8
+judge:before read eliminate_or_not from player D
+before check eliminate,player D have cards:
+13,11,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+13,11,8,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 8 cards
+judge:player B has 7 cards
+judge:player C has 5 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 7
+judge:after write cards_num to player A
+A: get message < 7
+judge:before read drawed_id from player A
+A: hold these cards:
+1,5,7,10,4,6,12,11,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 6
+judge:get player_index A,random_key 72, drawed_id 6
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 6
+judge:after write drawed_id to player B,drawed_id is 6
+judge:before read card_number from player B
+B: get message > 6
+B: hold these cards:
+9,1,5,13,7,12,4,
+B: after write card_number 12 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 12
+9,1,5,13,7,4,
+judge:before write card_number to player A,card_number is 12
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 12
+before check eliminate,player A have cards:
+1,5,7,10,4,6,12,11,
+A: before write eliminate_or_not 1 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+1,5,7,10,4,6,11,
+judge:get player_index A,random_key 72, eliminate_or_not 1
+A: wait for message...
+judge:player A has 7 cards
+judge:player B has 6 cards
+judge:player C has 5 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 5
+B: get message < 5
+judge:after write cards_num to player B
+B: hold these cards:
+judge:before read drawed_id from player B
+9,1,5,13,7,4,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 2
+judge:get player_index B,random_key 13419, drawed_id 2
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 2
+judge:after write drawed_id to player C,drawed_id is 2
+C: get message > 2
+judge:before read card_number from player C
+C: hold these cards:
+10,9,8,0,6,
+C: after write card_number 9 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 9
+10,8,0,6,
+judge:before write card_number to player B,card_number is 9
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 9
+before check eliminate,player B have cards:
+9,1,5,13,7,4,
+B: before write eliminate_or_not 1 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,13,7,4,
+judge:get player_index B,random_key 13419, eliminate_or_not 1
+B: wait for message...
+judge:player A has 7 cards
+judge:player B has 5 cards
+judge:player C has 4 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+10,8,0,6,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 2
+judge:get player_index C,random_key 63401, drawed_id 2
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 2
+judge:after write drawed_id to player D,drawed_id is 2
+judge:before read card_number from player D
+D: get message > 2
+D: hold these cards:
+13,11,8,
+D: after write card_number 11 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 11
+13,8,
+judge:before write card_number to player C,card_number is 11
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 11
+before check eliminate,player C have cards:
+10,8,0,6,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+10,8,0,6,11,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 7 cards
+judge:player B has 5 cards
+judge:player C has 5 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 7
+D: get message < 7
+judge:after write cards_num to player D
+D: hold these cards:
+judge:before read drawed_id from player D
+13,8,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 7
+judge:get player_index D,random_key 15341, drawed_id 7
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 7
+judge:after write drawed_id to player A,drawed_id is 7
+A: get message > 7
+judge:before read card_number from player A
+A: hold these cards:
+1,5,7,10,4,6,11,
+A: after write card_number 11 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 11
+1,5,7,10,4,6,
+judge:before write card_number to player D,card_number is 11
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 11
+before check eliminate,player D have cards:
+13,8,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+13,8,11,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 6 cards
+judge:player B has 5 cards
+judge:player C has 5 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+judge:after write cards_num to player A
+A: get message < 5
+judge:before read drawed_id from player A
+A: hold these cards:
+1,5,7,10,4,6,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 5
+judge:get player_index A,random_key 72, drawed_id 5
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 5
+judge:after write drawed_id to player B,drawed_id is 5
+judge:before read card_number from player B
+B: get message > 5
+B: hold these cards:
+1,5,13,7,4,
+B: after write card_number 4 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 4
+1,5,13,7,
+judge:before write card_number to player A,card_number is 4
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 4
+before check eliminate,player A have cards:
+1,5,7,10,4,6,
+A: before write eliminate_or_not 1 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+1,5,7,10,6,
+judge:get player_index A,random_key 72, eliminate_or_not 1
+A: wait for message...
+judge:player A has 5 cards
+judge:player B has 4 cards
+judge:player C has 5 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 5
+B: get message < 5
+judge:after write cards_num to player B
+B: hold these cards:
+judge:before read drawed_id from player B
+1,5,13,7,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 3
+judge:get player_index B,random_key 13419, drawed_id 3
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 3
+judge:after write drawed_id to player C,drawed_id is 3
+C: get message > 3
+judge:before read card_number from player C
+C: hold these cards:
+10,8,0,6,11,
+C: after write card_number 0 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 0
+10,8,6,11,
+judge:before write card_number to player B,card_number is 0
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 0
+before check eliminate,player B have cards:
+1,5,13,7,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,13,7,0,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 5 cards
+judge:player B has 5 cards
+judge:player C has 4 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+10,8,6,11,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 3
+judge:get player_index C,random_key 63401, drawed_id 3
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 3
+judge:after write drawed_id to player D,drawed_id is 3
+judge:before read card_number from player D
+D: get message > 3
+D: hold these cards:
+13,8,11,
+D: after write card_number 11 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 11
+13,8,
+judge:before write card_number to player C,card_number is 11
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 11
+before check eliminate,player C have cards:
+10,8,6,11,
+C: before write eliminate_or_not 1 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+10,8,6,
+judge:get player_index C,random_key 63401, eliminate_or_not 1
+C: wait for message...
+judge:player A has 5 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 5
+D: get message < 5
+judge:after write cards_num to player D
+D: hold these cards:
+judge:before read drawed_id from player D
+13,8,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 3
+judge:get player_index D,random_key 15341, drawed_id 3
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 3
+judge:after write drawed_id to player A,drawed_id is 3
+A: get message > 3
+judge:before read card_number from player A
+A: hold these cards:
+1,5,7,10,6,
+A: after write card_number 7 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 7
+1,5,10,6,
+judge:before write card_number to player D,card_number is 7
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 7
+before check eliminate,player D have cards:
+13,8,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+13,8,7,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 4 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+judge:after write cards_num to player A
+A: get message < 5
+judge:before read drawed_id from player A
+A: hold these cards:
+1,5,10,6,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 4
+judge:get player_index A,random_key 72, drawed_id 4
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 4
+judge:after write drawed_id to player B,drawed_id is 4
+judge:before read card_number from player B
+B: get message > 4
+B: hold these cards:
+1,5,13,7,0,
+B: after write card_number 7 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 7
+1,5,13,0,
+judge:before write card_number to player A,card_number is 7
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 7
+before check eliminate,player A have cards:
+1,5,10,6,
+A: before write eliminate_or_not 0 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+1,5,10,6,7,
+judge:get player_index A,random_key 72, eliminate_or_not 0
+A: wait for message...
+judge:player A has 5 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+B: get message < 3
+judge:after write cards_num to player B
+B: hold these cards:
+judge:before read drawed_id from player B
+1,5,13,0,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 1
+judge:get player_index B,random_key 13419, drawed_id 1
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 1
+judge:after write drawed_id to player C,drawed_id is 1
+C: get message > 1
+judge:before read card_number from player C
+C: hold these cards:
+10,8,6,
+C: after write card_number 10 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 10
+8,6,
+judge:before write card_number to player B,card_number is 10
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 10
+before check eliminate,player B have cards:
+1,5,13,0,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,13,0,10,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 5 cards
+judge:player B has 5 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+8,6,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 1
+judge:after write drawed_id to player D,drawed_id is 1
+judge:before read card_number from player D
+D: get message > 1
+D: hold these cards:
+13,8,7,
+D: after write card_number 13 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 13
+8,7,
+judge:before write card_number to player C,card_number is 13
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 13
+before check eliminate,player C have cards:
+8,6,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+8,6,13,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 5 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 5
+judge:after write cards_num to player D
+D: get message < 5
+judge:before read drawed_id from player D
+D: hold these cards:
+8,7,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 1
+judge:get player_index D,random_key 15341, drawed_id 1
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 1
+judge:after write drawed_id to player A,drawed_id is 1
+A: get message > 1
+judge:before read card_number from player A
+A: hold these cards:
+1,5,10,6,7,
+A: after write card_number 1 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 1
+5,10,6,7,
+judge:before write card_number to player D,card_number is 1
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 1
+before check eliminate,player D have cards:
+8,7,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+8,7,1,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 4 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+judge:after write cards_num to player A
+A: get message < 5
+judge:before read drawed_id from player A
+A: hold these cards:
+5,10,6,7,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 5
+judge:get player_index A,random_key 72, drawed_id 5
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 5
+judge:after write drawed_id to player B,drawed_id is 5
+judge:before read card_number from player B
+B: get message > 5
+B: hold these cards:
+1,5,13,0,10,
+B: after write card_number 10 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 10
+1,5,13,0,
+judge:before write card_number to player A,card_number is 10
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 10
+before check eliminate,player A have cards:
+5,10,6,7,
+A: before write eliminate_or_not 1 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+5,6,7,
+judge:get player_index A,random_key 72, eliminate_or_not 1
+A: wait for message...
+judge:player A has 3 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+B: get message < 3
+judge:after write cards_num to player B
+B: hold these cards:
+judge:before read drawed_id from player B
+1,5,13,0,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 2
+judge:get player_index B,random_key 13419, drawed_id 2
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 2
+judge:after write drawed_id to player C,drawed_id is 2
+C: get message > 2
+judge:before read card_number from player C
+C: hold these cards:
+8,6,13,
+C: after write card_number 6 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 6
+8,13,
+judge:before write card_number to player B,card_number is 6
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 6
+before check eliminate,player B have cards:
+1,5,13,0,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,13,0,6,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+8,13,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 2
+judge:get player_index C,random_key 63401, drawed_id 2
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 2
+judge:after write drawed_id to player D,drawed_id is 2
+judge:before read card_number from player D
+D: get message > 2
+D: hold these cards:
+8,7,1,
+D: after write card_number 7 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 7
+8,1,
+judge:before write card_number to player C,card_number is 7
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 7
+before check eliminate,player C have cards:
+8,13,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+8,13,7,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 3
+D: get message < 3
+judge:after write cards_num to player D
+D: hold these cards:
+judge:before read drawed_id from player D
+8,1,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 2
+judge:get player_index D,random_key 15341, drawed_id 2
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 2
+judge:after write drawed_id to player A,drawed_id is 2
+A: get message > 2
+judge:before read card_number from player A
+A: hold these cards:
+5,6,7,
+A: after write card_number 6 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 6
+5,7,
+judge:before write card_number to player D,card_number is 6
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 6
+before check eliminate,player D have cards:
+8,1,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+8,1,6,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 2 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+judge:after write cards_num to player A
+A: get message < 5
+judge:before read drawed_id from player A
+A: hold these cards:
+5,7,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 4
+judge:get player_index A,random_key 72, drawed_id 4
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 4
+judge:after write drawed_id to player B,drawed_id is 4
+judge:before read card_number from player B
+B: get message > 4
+B: hold these cards:
+1,5,13,0,6,
+B: after write card_number 0 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 0
+1,5,13,6,
+judge:before write card_number to player A,card_number is 0
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 0
+before check eliminate,player A have cards:
+5,7,
+A: before write eliminate_or_not 0 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+5,7,0,
+judge:get player_index A,random_key 72, eliminate_or_not 0
+A: wait for message...
+judge:player A has 3 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+B: get message < 3
+judge:after write cards_num to player B
+B: hold these cards:
+judge:before read drawed_id from player B
+1,5,13,6,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 1
+judge:get player_index B,random_key 13419, drawed_id 1
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 1
+judge:after write drawed_id to player C,drawed_id is 1
+C: get message > 1
+judge:before read card_number from player C
+C: hold these cards:
+8,13,7,
+C: after write card_number 8 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 8
+13,7,
+judge:before write card_number to player B,card_number is 8
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 8
+before check eliminate,player B have cards:
+1,5,13,6,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,13,6,8,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+13,7,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 1
+judge:after write drawed_id to player D,drawed_id is 1
+judge:before read card_number from player D
+D: get message > 1
+D: hold these cards:
+8,1,6,
+D: after write card_number 8 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 8
+1,6,
+judge:before write card_number to player C,card_number is 8
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 8
+before check eliminate,player C have cards:
+13,7,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+13,7,8,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 3
+D: get message < 3
+judge:after write cards_num to player D
+D: hold these cards:
+judge:before read drawed_id from player D
+1,6,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 1
+judge:get player_index D,random_key 15341, drawed_id 1
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 1
+judge:after write drawed_id to player A,drawed_id is 1
+A: get message > 1
+judge:before read card_number from player A
+A: hold these cards:
+5,7,0,
+A: after write card_number 5 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 5
+7,0,
+judge:before write card_number to player D,card_number is 5
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 5
+before check eliminate,player D have cards:
+1,6,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+1,6,5,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 2 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+judge:after write cards_num to player A
+A: get message < 5
+judge:before read drawed_id from player A
+A: hold these cards:
+7,0,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 3
+judge:get player_index A,random_key 72, drawed_id 3
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 3
+judge:after write drawed_id to player B,drawed_id is 3
+judge:before read card_number from player B
+B: get message > 3
+B: hold these cards:
+1,5,13,6,8,
+B: after write card_number 13 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 13
+1,5,6,8,
+judge:before write card_number to player A,card_number is 13
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 13
+before check eliminate,player A have cards:
+7,0,
+A: before write eliminate_or_not 0 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+7,0,13,
+judge:get player_index A,random_key 72, eliminate_or_not 0
+A: wait for message...
+judge:player A has 3 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+judge:after write cards_num to player B
+B: get message < 3
+judge:before read drawed_id from player B
+B: hold these cards:
+1,5,6,8,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 2
+judge:get player_index B,random_key 13419, drawed_id 2
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 2
+judge:after write drawed_id to player C,drawed_id is 2
+C: get message > 2
+judge:before read card_number from player C
+C: hold these cards:
+13,7,8,
+C: after write card_number 7 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 7
+13,8,
+judge:before write card_number to player B,card_number is 7
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 7
+before check eliminate,player B have cards:
+1,5,6,8,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,6,8,7,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+13,8,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 2
+judge:get player_index C,random_key 63401, drawed_id 2
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 2
+judge:after write drawed_id to player D,drawed_id is 2
+D: get message > 2
+judge:before read card_number from player D
+D: hold these cards:
+1,6,5,
+D: after write card_number 6 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 6
+1,5,
+judge:before write card_number to player C,card_number is 6
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 6
+before check eliminate,player C have cards:
+13,8,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+13,8,6,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 3 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 3
+judge:after write cards_num to player D
+D: get message < 3
+judge:before read drawed_id from player D
+D: hold these cards:
+1,5,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 2
+judge:get player_index D,random_key 15341, drawed_id 2
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 2
+judge:after write drawed_id to player A,drawed_id is 2
+judge:before read card_number from player A
+A: get message > 2
+A: hold these cards:
+7,0,13,
+A: after write card_number 0 to judge
+judge:after read card_number from player A
+A: after rearrange,hold cards:
+judge:get player_index A,random_key 72, card_number 0
+7,13,
+judge:before write card_number to player D,card_number is 0
+A: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 0
+before check eliminate,player D have cards:
+1,5,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+1,5,0,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 2 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player A's term
+judge:drawed_player is B
+judge:before write cards_num to player A,cards num is 5
+A: get message < 5
+judge:after write cards_num to player A
+A: hold these cards:
+judge:before read drawed_id from player A
+7,13,
+A term to draw card
+A:after write drawed_id to judge
+judge:after read drawed_id from player A
+player_index A,random_key 72,drawed_id 5
+judge:get player_index A,random_key 72, drawed_id 5
+before judge write card_number to A
+judge:before write drawed_id to player B,drawed_id is 5
+judge:after write drawed_id to player B,drawed_id is 5
+judge:before read card_number from player B
+B: get message > 5
+B: hold these cards:
+1,5,6,8,7,
+B: after write card_number 7 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 7
+1,5,6,8,
+judge:before write card_number to player A,card_number is 7
+B: wait for message...
+judge:before read eliminate_or_not from player A
+after judge write card_number_str to A,card_number_str is 7
+before check eliminate,player A have cards:
+7,13,
+A: before write eliminate_or_not 1 to judge
+A: after rearrange:
+judge:after read eliminate_or_not from player A
+13,
+judge:get player_index A,random_key 72, eliminate_or_not 1
+A: wait for message...
+judge:player A has 1 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+judge:after write cards_num to player B
+judge:before read drawed_id from player B
+B: get message < 3
+B: hold these cards:
+1,5,6,8,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 1
+judge:get player_index B,random_key 13419, drawed_id 1
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 1
+judge:after write drawed_id to player C,drawed_id is 1
+C: get message > 1
+judge:before read card_number from player C
+C: hold these cards:
+13,8,6,
+C: after write card_number 13 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 13
+8,6,
+judge:before write card_number to player B,card_number is 13
+C: wait for message...
+after judge write card_number_str to B,card_number_str is 13
+judge:before read eliminate_or_not from player B
+before check eliminate,player B have cards:
+1,5,6,8,
+B: before write eliminate_or_not 0 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,6,8,13,
+judge:get player_index B,random_key 13419, eliminate_or_not 0
+B: wait for message...
+judge:player A has 1 cards
+judge:player B has 5 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+8,6,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 1
+judge:after write drawed_id to player D,drawed_id is 1
+D: get message > 1
+judge:before read card_number from player D
+D: hold these cards:
+1,5,0,
+D: after write card_number 1 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 1
+5,0,
+judge:before write card_number to player C,card_number is 1
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 1
+before check eliminate,player C have cards:
+8,6,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+8,6,1,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 1 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is A
+judge:before write cards_num to player D,cards num is 1
+judge:after write cards_num to player D
+D: get message < 1
+judge:before read drawed_id from player D
+D: hold these cards:
+5,0,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 1
+judge:get player_index D,random_key 15341, drawed_id 1
+before judge write card_number to D
+judge:before write drawed_id to player A,drawed_id is 1
+judge:after write drawed_id to player A,drawed_id is 1
+judge:before read card_number from player A
+A: get message > 1
+A: hold these cards:
+13,
+A: after write card_number 13 to judge
+judge:after read card_number from player A
+A: wait for message...
+judge:get player_index A,random_key 72, card_number 13
+judge:before write card_number to player D,card_number is 13
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 13
+before check eliminate,player D have cards:
+5,0,
+D: before write eliminate_or_not 0 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+5,0,13,
+judge:get player_index D,random_key 15341, eliminate_or_not 0
+D: wait for message...
+judge:player A has 0 cards
+judge:player B has 5 cards
+judge:player C has 3 cards
+judge:player D has 3 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+judge:after write cards_num to player B
+B: get message < 3
+judge:before read drawed_id from player B
+B: hold these cards:
+1,5,6,8,13,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 2
+judge:get player_index B,random_key 13419, drawed_id 2
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 2
+judge:after write drawed_id to player C,drawed_id is 2
+C: get message > 2
+judge:before read card_number from player C
+C: hold these cards:
+8,6,1,
+C: after write card_number 6 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 6
+8,1,
+judge:before write card_number to player B,card_number is 6
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 6
+before check eliminate,player B have cards:
+1,5,6,8,13,
+B: before write eliminate_or_not 1 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+1,5,8,13,
+judge:get player_index B,random_key 13419, eliminate_or_not 1
+B: wait for message...
+judge:player A has 0 cards
+judge:player B has 4 cards
+judge:player C has 2 cards
+judge:player D has 3 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 3
+judge:after write cards_num to player C
+C: get message < 3
+judge:before read drawed_id from player C
+C: hold these cards:
+8,1,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 2
+judge:get player_index C,random_key 63401, drawed_id 2
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 2
+D: get message > 2
+judge:after write drawed_id to player D,drawed_id is 2
+D: hold these cards:
+judge:before read card_number from player D
+5,0,13,
+D: after write card_number 0 to judge
+judge:after read card_number from player D
+D: after rearrange,hold cards:
+judge:get player_index D,random_key 15341, card_number 0
+5,13,
+judge:before write card_number to player C,card_number is 0
+D: wait for message...
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 0
+before check eliminate,player C have cards:
+8,1,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+8,1,0,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 0 cards
+judge:player B has 4 cards
+judge:player C has 3 cards
+judge:player D has 2 cards
+judge:player D's term
+judge:drawed_player is B
+judge:before write cards_num to player D,cards num is 4
+judge:after write cards_num to player D
+D: get message < 4
+judge:before read drawed_id from player D
+D: hold these cards:
+5,13,
+D term to draw card
+D:after write drawed_id to judge
+judge:after read drawed_id from player D
+player_index D,random_key 15341,drawed_id 2
+judge:get player_index D,random_key 15341, drawed_id 2
+before judge write card_number to D
+judge:before write drawed_id to player B,drawed_id is 2
+judge:after write drawed_id to player B,drawed_id is 2
+B: get message > 2
+judge:before read card_number from player B
+B: hold these cards:
+1,5,8,13,
+B: after write card_number 5 to judge
+judge:after read card_number from player B
+B: after rearrange,hold cards:
+judge:get player_index B,random_key 13419, card_number 5
+1,8,13,
+judge:before write card_number to player D,card_number is 5
+B: wait for message...
+judge:before read eliminate_or_not from player D
+after judge write card_number_str to D,card_number_str is 5
+before check eliminate,player D have cards:
+5,13,
+D: before write eliminate_or_not 1 to judge
+D: after rearrange:
+judge:after read eliminate_or_not from player D
+13,
+judge:get player_index D,random_key 15341, eliminate_or_not 1
+D: wait for message...
+judge:player A has 0 cards
+judge:player B has 3 cards
+judge:player C has 3 cards
+judge:player D has 1 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+judge:after write cards_num to player B
+B: get message < 3
+judge:before read drawed_id from player B
+B: hold these cards:
+1,8,13,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 2
+judge:get player_index B,random_key 13419, drawed_id 2
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 2
+judge:after write drawed_id to player C,drawed_id is 2
+C: get message > 2
+judge:before read card_number from player C
+C: hold these cards:
+8,1,0,
+C: after write card_number 1 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 1
+8,0,
+judge:before write card_number to player B,card_number is 1
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 1
+before check eliminate,player B have cards:
+1,8,13,
+B: before write eliminate_or_not 1 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+8,13,
+judge:get player_index B,random_key 13419, eliminate_or_not 1
+B: wait for message...
+judge:player A has 0 cards
+judge:player B has 2 cards
+judge:player C has 2 cards
+judge:player D has 1 cards
+judge:player C's term
+judge:drawed_player is D
+judge:before write cards_num to player C,cards num is 1
+judge:after write cards_num to player C
+C: get message < 1
+judge:before read drawed_id from player C
+C: hold these cards:
+8,0,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player D,drawed_id is 1
+judge:after write drawed_id to player D,drawed_id is 1
+D: get message > 1
+judge:before read card_number from player D
+D: hold these cards:
+13,
+D: after write card_number 13 to judge
+judge:after read card_number from player D
+D: wait for message...
+judge:get player_index D,random_key 15341, card_number 13
+judge:before write card_number to player C,card_number is 13
+judge:before read eliminate_or_not from player C
+after judge write card_number_str to C,card_number_str is 13
+before check eliminate,player C have cards:
+8,0,
+C: before write eliminate_or_not 0 to judge
+C: after rearrange:
+judge:after read eliminate_or_not from player C
+8,0,13,
+judge:get player_index C,random_key 63401, eliminate_or_not 0
+C: wait for message...
+judge:player A has 0 cards
+judge:player B has 2 cards
+judge:player C has 3 cards
+judge:player D has 0 cards
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge:player B's term
+judge:drawed_player is C
+judge:before write cards_num to player B,cards num is 3
+judge:after write cards_num to player B
+B: get message < 3
+judge:before read drawed_id from player B
+B: hold these cards:
+8,13,
+B term to draw card
+B:after write drawed_id to judge
+judge:after read drawed_id from player B
+player_index B,random_key 13419,drawed_id 1
+judge:get player_index B,random_key 13419, drawed_id 1
+before judge write card_number to B
+judge:before write drawed_id to player C,drawed_id is 1
+judge:after write drawed_id to player C,drawed_id is 1
+C: get message > 1
+judge:before read card_number from player C
+C: hold these cards:
+8,0,13,
+C: after write card_number 8 to judge
+judge:after read card_number from player C
+C: after rearrange,hold cards:
+judge:get player_index C,random_key 63401, card_number 8
+0,13,
+judge:before write card_number to player B,card_number is 8
+C: wait for message...
+judge:before read eliminate_or_not from player B
+after judge write card_number_str to B,card_number_str is 8
+before check eliminate,player B have cards:
+8,13,
+B: before write eliminate_or_not 1 to judge
+B: after rearrange:
+judge:after read eliminate_or_not from player B
+13,
+judge:get player_index B,random_key 13419, eliminate_or_not 1
+B: wait for message...
+judge:player A has 0 cards
+judge:player B has 1 cards
+judge:player C has 2 cards
+judge:player D has 0 cards
+judge:player C's term
+judge:drawed_player is B
+judge:before write cards_num to player C,cards num is 1
+judge:after write cards_num to player C
+C: get message < 1
+judge:before read drawed_id from player C
+C: hold these cards:
+0,13,
+C term to draw card
+C:after write drawed_id to judge
+judge:after read drawed_id from player C
+player_index C,random_key 63401,drawed_id 1
+judge:get player_index C,random_key 63401, drawed_id 1
+before judge write card_number to C
+judge:before write drawed_id to player B,drawed_id is 1
+judge:after write drawed_id to player B,drawed_id is 1
+B: get message > 1
+judge:before read card_number from player B
+B: hold these cards:
+13,
+B: after write card_number 13 to judge
+judge:after read card_number from player B
+B: wait for message...
+judge:playerA,pid7808,random_key72,player_id1,fifo_tell_path./judge1_A.FIFO
+judge:playerB,pid7809,random_key13419,player_id2,fifo_tell_path./judge1_B.FIFO
+judge:playerC,pid7810,random_key63401,player_id3,fifo_tell_path./judge1_C.FIFO
+judge:playerD,pid7811,random_key15341,player_id4,fifo_tell_path./judge1_D.FIFO
+judge: loser_counter is 1
+judge: loser_counter is 2
+judge:to organizer,loser is3
+select_judge is1
+organizer:after select_judge,total game 1
+organizer:loser is 3
+organizer:finished game 1 total game 1
+judge clean listen fifo
+judge clean tell fifoA
+judge clean tell fifoB
+judge clean tell fifoC
+judge clean tell fifoD
+judgeinput0 0 0 0
+endsigunlink ./judge1.FIFO
+unlink ./judge1_A.FIFO
+unlink ./judge1_B.FIFO
+unlink ./judge1_C.FIFO
+unlink ./judge1_D.FIFO
+0 0 -1 0 

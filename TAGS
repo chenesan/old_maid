@@ -1,0 +1,53 @@
+
+cards.c,19
+void shuffle(6,78
+
+judge.c,43
+char* cards[cards14,251
+int main(18,514
+
+judge_init.c,82
+int alloc_player_id(8,121
+int init_fifo(18,319
+int init_player_in_judge(36,830
+
+judge_util.c,23
+void judge_scanf(4,63
+
+organizer.c,17
+int main(10,201
+
+organizer_init.c,74
+int init_organizer(8,127
+void init_player(37,831
+int init_judge(45,996
+
+organizer_util.c,23
+int listen_judge(4,71
+
+player.c,16
+int main(7,118
+
+cards.h,45
+#define CARDS_H3,17
+#define CARDS_NUM 5,34
+
+helper.h,106
+int factorial(4,56
+int combination(8,131
+int compareint(12,265
+void prints(19,405
+void printd(39,749
+
+judge_init.h,99
+#define JUDGE_INIT_H2,21
+#define PLAYER_NUM 3,42
+static const char player_abcd[player_abcd5,64
+
+organizer_init.h,30
+#define ORGANIZER_INIT_H2,25
+
+organizer_util.h,30
+#define ORGANIZER_UTIL_H2,25
+
+judge_util.h,0
