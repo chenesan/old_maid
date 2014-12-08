@@ -164,15 +164,10 @@ int main(int argc,char** argv)
 #endif
 		sprintf(message,"< %d\n",player_cards_num[drawed_player]);
 		write(tell_fd[round_counter],message,strlen(message));
-#ifdef DEBUG
-		fprintf(stderr,"judge:after write cards_num to player %s\n",player_abcd[round_counter]);
-#endif		
+		
 		char* drawed_id_str=(char*)malloc(sizeof(char)*4);
 		char* temp_player_index=(char*)malloc(sizeof(char)*4);
 		char* temp_random_key=(char*)malloc(sizeof(char)*8);
-#ifdef DEBUG
-		fprintf(stderr,"judge:before read drawed_id from player %s\n",player_abcd[round_counter]);
-#endif
 		judge_scanf(listen_fifo_file,temp_player_index,temp_random_key,drawed_id_str,random_key[round_counter]);
 #ifdef DEBUG
 		fprintf(stderr,"judge:after read drawed_id from player %s\n",player_abcd[round_counter]);
@@ -182,14 +177,9 @@ int main(int argc,char** argv)
 #endif
 		sprintf(message,"> %s\n",drawed_id_str);
 		write(tell_fd[drawed_player],message,strlen(message));
-#ifdef DEBUG
-		fprintf(stderr,"judge:after write drawed_id to player %s,drawed_id is %s\n",player_abcd[drawed_player],drawed_id_str);
-#endif
 		free(drawed_id_str);
+		
 		char* card_number=(char*)malloc(sizeof(char)*4);
-#ifdef DEBUG
-		fprintf(stderr,"judge:before read card_number from player %s\n",player_abcd[drawed_player]);
-#endif
 		judge_scanf(listen_fifo_file,temp_player_index,temp_random_key,card_number,random_key[drawed_player]);
 #ifdef DEBUG
 		fprintf(stderr,"judge:after read card_number from player %s\n",player_abcd[drawed_player]);
@@ -211,9 +201,7 @@ int main(int argc,char** argv)
 		sprintf(message,"%s\n",card_number);
 		write(tell_fd[round_counter],message,strlen(message));
 		free(card_number);
-#ifdef DEBUG
-		fprintf(stderr,"judge:before read eliminate_or_not from player %s\n",player_abcd[round_counter]);
-#endif
+		
 		char* eliminate_or_not=(char*)malloc(sizeof(char)*4);
 		judge_scanf(listen_fifo_file,temp_player_index,temp_random_key,eliminate_or_not,random_key[round_counter]);
 #ifdef DEBUG
@@ -247,26 +235,14 @@ int main(int argc,char** argv)
 #endif		
 	    }
 
-#ifdef DEBUG
-	int debug_counter=0;
-	for(;debug_counter!=PLAYER_NUM;debug_counter++)
-	{
-	    fprintf(stderr,"judge:player%s,pid%d,random_key%s,player_id%s,fifo_tell_path%s\n",player_abcd[debug_counter],player_pid[debug_counter],random_key[debug_counter],player_id[debug_counter],fifo_tell_player[debug_counter]);
-	}
-#endif	    
 	}
 
 	int loser_counter=0;	
 	while(end_game[loser_counter]==1)
 	{
 	    loser_counter++;
-#ifdef DEBUG
-	    fprintf(stderr,"judge: loser_counter is %d\n",loser_counter);
-#endif
 	}
-#ifdef DEBUG
-	fprintf(stderr,"judge:to organizer,loser is%s\n",player_id[loser_counter]);
-#endif
+	
 	sprintf(message,"%s\n",player_id[loser_counter]);
 	write(1,message,strlen(message));
 
@@ -295,16 +271,10 @@ int main(int argc,char** argv)
     }
     
     unlink(fifo_listen_player);
-#ifdef DEBUG
-    fprintf(stderr,"unlink %s\n",fifo_listen_player);
-#endif
     int unlink_counter=0;
     for(;unlink_counter!=PLAYER_NUM;unlink_counter++)
     {
 	unlink(fifo_tell_player[unlink_counter]);
-#ifdef DEBUG
-	fprintf(stderr,"unlink %s\n",fifo_tell_player[unlink_counter]);
-#endif
     }
     
     exit(0);
