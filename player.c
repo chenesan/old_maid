@@ -6,9 +6,11 @@
 #include "helper.h"
 int main(int argc,char** argv)
 {
+	
 #ifdef DEBUG
     fprintf(stderr,"call player,judgeid%s,index%s,random%s\n",argv[1],argv[2],argv[3]);
 #endif
+
     char* judge_id=argv[1];
     char* player_index=argv[2];
     char* random_key=argv[3];
@@ -24,10 +26,6 @@ int main(int argc,char** argv)
     char* listen_fifo=(char*)malloc(sizeof(char)*20);
     sprintf(listen_fifo,"judge%s_%s.FIFO",judge_id,player_index);
     int listen_fd=open(listen_fifo,O_RDONLY|O_NONBLOCK,777);
-#ifdef DEBUG 
-    fprintf(stderr,"%s player to listen fifo %s,fd %d\n",player_index,listen_fifo,listen_fd);    
-    fprintf(stderr,"%s player to get cards\n",player_index);
-#endif
     free(listen_fifo);
     
     int cards_num=(*player_index=='A') ? 14 : 13;
@@ -123,10 +121,12 @@ int main(int argc,char** argv)
 #ifdef DEBUG
 	fprintf(stderr,"%s: wait for message...\n",player_index);
 #endif
+
 	while(fscanf(listen_file,"%s %s",type,temp_num)==EOF)
 	{
 	    sleep(0.5);
 	}
+	
 #ifdef DEBUG
 	fprintf(stderr,"%s: get message %s %s\n",player_index,type,temp_num);
 	fprintf(stderr,"%s: hold these cards:\n",player_index);
@@ -151,9 +151,6 @@ int main(int argc,char** argv)
 	    fprintf(stderr,"player_index %s,random_key %s,drawed_id %d\n",player_index,random_key,drawed_id);
 #endif
 
-#ifdef DEBUG	    
-	    fprintf(stderr,"before judge write card_number to %s\n",player_index);
-#endif
 	    char* card_number_str=(char*)malloc(sizeof(char)*4);	    
 	    while(fscanf(listen_file,"%s",card_number_str)==EOF){}
 #ifdef DEBUG	   
